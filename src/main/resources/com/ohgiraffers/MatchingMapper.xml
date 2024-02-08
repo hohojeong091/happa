@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ohgiraffers.MatchingMapper">
+
+
+    <resultMap id="programResultMap" type="com.ohgiraffers.ProgramDTO">
+
+        <id property="programCode" column="program_code"/>
+
+        <result property="programName" column="program_name"/>
+        <result property="programOpenDate" column="program_opendate"/>
+        <result property="programCategory" column="program_category"/>
+
+    </resultMap>
+
+    <select id="selectAllProgram" resultMap="programResultMap">
+        SELECT
+         program_code,
+         program_name,
+         program_opendate,
+         program_category
+        FROM
+         mentoring_program
+        ORDER BY
+         program_code
+
+    </select>
+
+
+    <select id="selectProgramByCode" parameterType="_int" resultMap="programResultMap">
+        SELECT
+         program_code,
+         program_name,
+         program_opendate,
+         program_category
+        FROM
+         mentoring_program
+        WHERE
+         program_code = #{ programCode }
+
+    </select>
+
+
+    <insert id="insertProgram" parameterType="com.ohgiraffers.ProgramDTO">
+        INSERT INTO
+         mentoring_program (program_name, program_opendate, program_category)
+        VALUES
+         (program_name ,  program_opendate ,  program_category )
+    </insert>
+
+    <update id="updateProgram" parameterType="com.ohgiraffers.ProgramDTO">
+        UPDATE
+         mentoring_program
+        SET
+         program_code = #{ programCode },
+         program_name = #{ programName },
+         progrma_opendate = #{ programOpendate },
+         program_category = #{ programCategory }
+        WHERE
+         program_code = #{ programCode }
+    </update>
+
+    <delete id="deleteProgram" parameterType="_int">
+        DELETE FROM
+         mentoring_program
+        WHERE
+         program_code = #{ programCode }
+    </delete>
+
+</mapper>
