@@ -1,0 +1,130 @@
+@charset "UTF-8" ;
+
+html {
+    font-size : 100%
+}
+
+body {
+    color: antiquewhite;
+    line-height: 2.0;
+    background-color: black;
+    position: relative;
+    height: 100vh;
+
+}
+
+
+
+img {
+    max-width : 25vh
+
+}
+header {
+    height : 100px;
+    width : 100%;
+    background-color: goldenrod;
+    padding : 0 15px 0 15px  ;
+    font-weight : bold;
+    align-items : center;
+    /*커서 모양 바뀌게 - 클릭 */
+
+}
+
+nav{
+    font-size : 1.25rem;
+    text-align : center;
+    display : flex;
+    text-decoration: none;
+    list-style-type : none ;
+
+    color: antiquewhite;
+}
+
+nav ul li{
+    font-size : 16px;
+    line-height : 6.2;
+    margin : 0 15px;
+    display : inline-block;
+    color : antiquewhite;
+
+
+}
+.main-v1 {
+    text-align : center;
+    margin : 10px 0 42px;
+}
+.main-v1:hover {
+    background-color : yellow;
+    color : hotpink;
+    transform : rotateZ(180deg);
+}
+.intro {
+    display : flex;
+    text-align : center;
+}
+
+.img_wrap {
+    margin-left : 100px;
+}
+.Myinfo {
+    font-weight : bold;
+    font-size : 1.25rem;
+    color : antiquewhite;
+    text-align : center;
+    padding-left : 100px;
+}
+
+.null {
+    width : 100px;
+
+
+}
+.mystory {
+    margin-left : 50px;
+    font-size : 23px;
+
+
+}
+
+
+/*body {*/
+/*    background: #eee;*/
+/*    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+/*    font-size: 14px;*/
+/*    color: #000;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.swiper {*/
+/*    position: fixed;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    text-align : center ;*/
+/*    position : absolute ;*/
+/*}*/
+
+/*.swiper-slide {*/
+/*    text-align: center;*/
+/*    font-size: 18px;*/
+/*    background: honeydew;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.swiper-slide img {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.intro {*/
+/*    width : 75px;*/
+/*    height : 100px;*/
+/*    background : honeydew;*/
+/*    color : black;*/
+/*    text-align : left ;*/
+
+/*}*/
